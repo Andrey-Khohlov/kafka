@@ -1,4 +1,6 @@
-*This is educational Kafka project
+This is educational Kafka project
+
+docker compose up
 
 docker exec -it kafka /bin/sh
 cd opt/kafka_2.13-2.8.1/bin
