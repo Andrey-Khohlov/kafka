@@ -7,3 +7,13 @@ cd opt/kafka_2.13-2.8.1/bin
 kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic test_topic
 kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic test_topic_1
 kafka-topics.sh --list --zookeeper zookeeper:2181
+
+docker exec -it zookeeper /bin/sh
+echo mntr | nc localhost 2181
+cd /opt/zookeeper-3.4.13/bin
+./zkCli.sh whoami
+./zkServer.sh status
+
+
+
+
